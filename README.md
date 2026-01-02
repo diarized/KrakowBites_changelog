@@ -13,9 +13,9 @@ Public changelog of deliverables, documentation, and design work for the KrakowB
 
 **Add brand identity critical review and Urban Cartography mockup34c643f922875357db923abe0c0629793787904f|2026-01-01 20:06:14 +0100|Add KrakowBites infrastructure setup documentation and deployment**
 
-- [README.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/README.md)
-- [urban-cartography-mockup.html](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/urban-cartography-mockup.html)
-- [urban-cartography-specs.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/urban-cartography-specs.md)
-- [brand-identity-review.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-identity-review.md)
-- [visual-evidence.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/competitor-analysis/visual-evidence.md)
+- [brand-alternatives/README.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/README.md)
+- [brand-alternatives/urban-cartography-mockup.html](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/urban-cartography-mockup.html)
+- [brand-alternatives/urban-cartography-specs.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/urban-cartography-specs.md)
+- [docs/brand-identity-review.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-identity-review.md)
+- [competitor-analysis/visual-evidence.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/competitor-analysis/visual-evidence.md)
 
