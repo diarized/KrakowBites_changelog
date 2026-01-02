@@ -17,6 +17,13 @@ Public changelog of deliverables, documentation, and design work for the KrakowB
 ---
 
 
+## 2026-01-02
+
+**Add GitHub Pages setup documentation**
+
+- [github-pages-setup.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/github-pages-setup.md)
+
+
 ## 2026-01-01
 
 **Add brand identity critical review and Urban Cartography mockup**
