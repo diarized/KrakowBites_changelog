@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrakowBites - Urban Cartography Brand Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+           URBAN CARTOGRAPHY BRAND SYSTEM
+           ======================================== */
+
+        :root {
+            /* Color Palette */
+            --map-paper: #f8f5f0;
+            --route-line: #e76f51;
+            --water-blue: #2a9d8f;
+            --landmark-brown: #6b4226;
+            --path-grey: #4a4a4a;
+            --ink-black: #2d2d2d;
+            --white: #ffffff;
+            --light-cream: #fdfcfa;
+
+            /* Typography */
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            /* Spacing (4px base unit) */
+            --space-1: 4px;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-6: 24px;
+            --space-8: 32px;
+            --space-12: 48px;
+            --space-16: 64px;
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--ink-black);
+            background: var(--map-paper);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography Scale */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--landmark-brown);
+        }
+
+        h1 { font-size: 56px; letter-spacing: -0.02em; }
+        h2 { font-size: 40px; letter-spacing: -0.01em; }
+        h3 { font-size: 32px; }
+        h4 { font-size: 24px; }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--path-grey);
+        }
+
+        .coordinates {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--water-blue);
+            letter-spacing: 0.02em;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            border-bottom: 2px solid var(--map-paper);
+            padding: var(--space-4) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-1);
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--landmark-brown);
+            letter-spacing: -0.01em;
+        }
+
+        .logo-coordinates {
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--water-blue);
+            letter-spacing: 0.05em;
+        }
+
+        .logo-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--route-line) 0%, transparent 100%);
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-8);
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--path-grey);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--route-line);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--light-cream) 0%, var(--map-paper) 100%);
+            padding: var(--space-16) 0 var(--space-12);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(42, 157, 143, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: var(--water-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-4);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--route-line);
+        }
+
+        .hero h1 {
+            margin-bottom: var(--space-6);
+            color: var(--landmark-brown);
+        }
+
+        .hero-description {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--path-grey);
+            margin-bottom: var(--space-8);
+        }
+
+        .hero-coordinates {
+            display: flex;
+            gap: var(--space-6);
+            margin-bottom: var(--space-8);
+        }
+
+        .coordinate-item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-1);
+        }
+
+        .coordinate-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--path-grey);
+            font-weight: 600;
+        }
+
+        .coordinate-value {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            color: var(--water-blue);
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-4) var(--space-6);
+            font-family: var(--font-body);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .button-primary {
+            background: var(--route-line);
+            color: var(--white);
+            box-shadow: 0 2px 8px rgba(231, 111, 81, 0.2);
+        }
+
+        .button-primary:hover {
+            background: #d65a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(231, 111, 81, 0.3);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--water-blue);
+            border: 2px solid var(--water-blue);
+        }
+
+        .button-secondary:hover {
+            background: var(--water-blue);
+            color: var(--white);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-4);
+        }
+
+        /* Section */
+        .section {
+            padding: var(--space-16) 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-12);
+        }
+
+        .section-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--water-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-3);
+        }
+
+        .section-title {
+            margin-bottom: var(--space-4);
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--path-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Tour Cards Grid */
+        .tours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .tour-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            border-color: var(--route-line);
+        }
+
+        .tour-card-image {
+            position: relative;
+            height: 220px;
+            background: var(--map-paper);
+            overflow: hidden;
+        }
+
+        .tour-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .route-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+            padding: var(--space-4);
+            display: flex;
+            align-items: flex-end;
+            gap: var(--space-3);
+        }
+
+        .route-marker {
+            width: 20px;
+            height: 20px;
+            background: var(--route-line);
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .route-marker::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 40px;
+            height: 2px;
+            background: var(--white);
+            opacity: 0.5;
+        }
+
+        .route-marker:last-child::before {
+            display: none;
+        }
+
+        .tour-card-content {
+            padding: var(--space-6);
+        }
+
+        .tour-card-meta {
+            display: flex;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+
+        .tour-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: 13px;
+            color: var(--path-grey);
+        }
+
+        .tour-meta-icon {
+            font-size: 16px;
+        }
+
+        .tour-card h3 {
+            font-size: 24px;
+            margin-bottom: var(--space-3);
+            color: var(--landmark-brown);
+        }
+
+        .tour-card-description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--path-grey);
+            margin-bottom: var(--space-6);
+        }
+
+        .tour-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--map-paper);
+        }
+
+        .tour-price {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--landmark-brown);
+        }
+
+        .tour-price-label {
+            font-size: 12px;
+            color: var(--path-grey);
+            font-weight: 400;
+        }
+
+        .tour-cta {
+            font-size: 15px;
+            padding: var(--space-3) var(--space-6);
+        }
+
+        /* Color Palette Section */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+
+        .palette-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .palette-swatch {
+            height: 140px;
+        }
+
+        .palette-info {
+            padding: var(--space-4);
+        }
+
+        .palette-name {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--landmark-brown);
+            margin-bottom: var(--space-2);
+        }
+
+        .palette-hex {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            color: var(--water-blue);
+            margin-bottom: var(--space-2);
+        }
+
+        .palette-usage {
+            font-size: 13px;
+            color: var(--path-grey);
+        }
+
+        /* Typography Showcase */
+        .typography-showcase {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            margin-top: var(--space-8);
+        }
+
+        .type-specimen {
+            margin-bottom: var(--space-8);
+            padding-bottom: var(--space-8);
+            border-bottom: 1px solid var(--map-paper);
+        }
+
+        .type-specimen:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .type-label {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--water-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-3);
+        }
+
+        .type-example {
+            color: var(--landmark-brown);
+        }
+
+        .type-details {
+            font-size: 13px;
+            color: var(--path-grey);
+            margin-top: var(--space-2);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--landmark-brown);
+            color: var(--map-paper);
+            padding: var(--space-12) 0 var(--space-6);
+            margin-top: var(--space-16);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            text-align: center;
+        }
+
+        .footer h3 {
+            color: var(--white);
+            margin-bottom: var(--space-4);
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-meta {
+            margin-top: var(--space-8);
+            padding-top: var(--space-6);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .hero::before {
+                display: none;
+            }
+
+            .tour-card {
+                break-inside: avoid;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-text">KRAKÓW BITES</div>
+                <div class="logo-coordinates">50.0614°N, 19.9383°E</div>
+                <div class="logo-line"></div>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Tours</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Stories</a>
+                <a href="#" class="button button-primary">Plot Your Journey</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">Urban Cartography Concept</div>
+                <h1>Navigate Kraków's Culinary Landscape</h1>
+                <p class="hero-description">
+                    Discover forgotten flavors and unmapped territories through expertly curated food tours.
+                    Your cartographer of Kraków's hidden culinary stories.
+                </p>
+
+                <div class="hero-coordinates">
+                    <div class="coordinate-item">
+                        <div class="coordinate-label">Starting Point</div>
+                        <div class="coordinate-value">Old Town Square</div>
+                    </div>
+                    <div class="coordinate-item">
+                        <div class="coordinate-label">Distance</div>
+                        <div class="coordinate-value">2.4 km</div>
+                    </div>
+                    <div class="coordinate-item">
+                        <div class="coordinate-label">Duration</div>
+                        <div class="coordinate-value">3.5 hours</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#" class="button button-primary">Explore Routes</a>
+                    <a href="#" class="button button-secondary">View Map</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Featured Routes</div>
+                <h2 class="section-title">Curated Culinary Journeys</h2>
+                <p class="section-description">
+                    Each route is carefully mapped to connect forgotten stories with authentic flavors
+                </p>
+            </div>
+
+            <div class="tours-grid">
+                <!-- Tour Card 1 -->
+                <article class="tour-card">
+                    <div class="tour-card-image" style="background: linear-gradient(135deg, #e76f51 0%, #f4a261 100%);">
+                        <div class="route-overlay">
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                        </div>
+                    </div>
+                    <div class="tour-card-content">
+                        <div class="tour-card-meta">
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">📍</span>
+                                <span>Kazimierz</span>
+                            </div>
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">⏱</span>
+                                <span>3.5 hrs</span>
+                            </div>
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">🚶</span>
+                                <span>2.4 km</span>
+                            </div>
+                        </div>
+                        <h3>Route 1: Kazimierz Food Corridor</h3>
+                        <p class="tour-card-description">
+                            Navigate through the historic Jewish quarter's hidden culinary gems.
+                            Four carefully plotted stops reveal centuries of food traditions.
+                        </p>
+                        <div class="tour-card-footer">
+                            <div>
+                                <div class="tour-price">340 PLN</div>
+                                <div class="tour-price-label">per person</div>
+                            </div>
+                            <a href="#" class="button button-primary tour-cta">Plot Route</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tour Card 2 -->
+                <article class="tour-card">
+                    <div class="tour-card-image" style="background: linear-gradient(135deg, #2a9d8f 0%, #68b5a8 100%);">
+                        <div class="route-overlay">
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                        </div>
+                    </div>
+                    <div class="tour-card-content">
+                        <div class="tour-card-meta">
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">📍</span>
+                                <span>Old Town</span>
+                            </div>
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">⏱</span>
+                                <span>4 hrs</span>
+                            </div>
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">🚶</span>
+                                <span>3.2 km</span>
+                            </div>
+                        </div>
+                        <h3>Route 2: Market Square Heritage</h3>
+                        <p class="tour-card-description">
+                            From medieval trade routes to modern bistros. Five waypoints chart
+                            700 years of culinary evolution in Kraków's heart.
+                        </p>
+                        <div class="tour-card-footer">
+                            <div>
+                                <div class="tour-price">380 PLN</div>
+                                <div class="tour-price-label">per person</div>
+                            </div>
+                            <a href="#" class="button button-primary tour-cta">Plot Route</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tour Card 3 -->
+                <article class="tour-card">
+                    <div class="tour-card-image" style="background: linear-gradient(135deg, #6b4226 0%, #a0826d 100%);">
+                        <div class="route-overlay">
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                            <div class="route-marker"></div>
+                        </div>
+                    </div>
+                    <div class="tour-card-content">
+                        <div class="tour-card-meta">
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">📍</span>
+                                <span>Podgórze</span>
+                            </div>
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">⏱</span>
+                                <span>3 hrs</span>
+                            </div>
+                            <div class="tour-meta-item">
+                                <span class="tour-meta-icon">🚶</span>
+                                <span>2.8 km</span>
+                            </div>
+                        </div>
+                        <h3>Route 3: Industrial Quarter Transformation</h3>
+                        <p class="tour-card-description">
+                            Trace the transformation from factory district to culinary hotspot.
+                            Three stops showcase the new generation of Polish cuisine.
+                        </p>
+                        <div class="tour-card-footer">
+                            <div>
+                                <div class="tour-price">320 PLN</div>
+                                <div class="tour-price-label">per person</div>
+                            </div>
+                            <a href="#" class="button button-primary tour-cta">Plot Route</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette Section -->
+    <section class="section" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Brand System</div>
+                <h2 class="section-title">Urban Cartography Color Palette</h2>
+                <p class="section-description">
+                    Inspired by aged maps, route markers, and the warm tones of Kraków's architecture
+                </p>
+            </div>
+
+            <div class="palette-grid">
+                <div class="palette-item">
+                    <div class="palette-swatch" style="background: #e76f51;"></div>
+                    <div class="palette-info">
+                        <div class="palette-name">Route Line</div>
+                        <div class="palette-hex">#e76f51</div>
+                        <div class="palette-usage">Primary CTAs, route markers, links</div>
+                    </div>
+                </div>
+
+                <div class="palette-item">
+                    <div class="palette-swatch" style="background: #2a9d8f;"></div>
+                    <div class="palette-info">
+                        <div class="palette-name">Water Blue</div>
+                        <div class="palette-hex">#2a9d8f</div>
+                        <div class="palette-usage">Secondary links, coordinates, accents</div>
+                    </div>
+                </div>
+
+                <div class="palette-item">
+                    <div class="palette-swatch" style="background: #6b4226;"></div>
+                    <div class="palette-info">
+                        <div class="palette-name">Landmark Brown</div>
+                        <div class="palette-hex">#6b4226</div>
+                        <div class="palette-usage">Headings, heritage elements</div>
+                    </div>
+                </div>
+
+                <div class="palette-item">
+                    <div class="palette-swatch" style="background: #f8f5f0;"></div>
+                    <div class="palette-info">
+                        <div class="palette-name">Map Paper</div>
+                        <div class="palette-hex">#f8f5f0</div>
+                        <div class="palette-usage">Backgrounds, page base</div>
+                    </div>
+                </div>
+
+                <div class="palette-item">
+                    <div class="palette-swatch" style="background: #4a4a4a;"></div>
+                    <div class="palette-info">
+                        <div class="palette-name">Path Grey</div>
+                        <div class="palette-hex">#4a4a4a</div>
+                        <div class="palette-usage">Body text, secondary information</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-eyebrow">Typography System</div>
+                <h2 class="section-title">Cartographic Typography</h2>
+                <p class="section-description">
+                    Space Grotesk for labels, Inter for readability, JetBrains Mono for coordinates
+                </p>
+            </div>
+
+            <div class="typography-showcase">
+                <div class="type-specimen">
+                    <div class="type-label">Heading 1 - Space Grotesk Bold</div>
+                    <h1 class="type-example">Navigate Kraków's Culinary Landscape</h1>
+                    <div class="type-details">56px / Bold / -0.02em letter-spacing</div>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">Heading 2 - Space Grotesk Bold</div>
+                    <h2 class="type-example">Curated Culinary Journeys</h2>
+                    <div class="type-details">40px / Bold / -0.01em letter-spacing</div>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">Heading 3 - Space Grotesk Bold</div>
+                    <h3 class="type-example">Route 1: Kazimierz Food Corridor</h3>
+                    <div class="type-details">32px / Bold / Normal letter-spacing</div>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">Body Text - Inter Regular</div>
+                    <p class="type-example">
+                        Discover forgotten flavors and unmapped territories through expertly curated food tours.
+                        Each route connects authentic Kraków experiences with centuries of culinary tradition.
+                    </p>
+                    <div class="type-details">16px / Regular / 1.7 line-height</div>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">Coordinates - JetBrains Mono Regular</div>
+                    <div class="coordinates type-example">50.0614°N, 19.9383°E</div>
+                    <div class="type-details">13px / Regular / 0.02em letter-spacing / Uppercase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Ready to Explore?</h3>
+            <p>Plot your journey through Kraków's culinary landscape</p>
+            <div style="margin-top: 32px;">
+                <a href="#" class="button button-primary">Start Navigation</a>
+            </div>
+            <div class="footer-meta">
+                <p>Urban Cartography Brand Concept • KrakowBites • 2026-01-01</p>
+                <p style="margin-top: 8px;">0% overlap with competitors • WCAG AAA compliant • Food-forward positioning</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
