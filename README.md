@@ -19,6 +19,17 @@ Public changelog of deliverables, documentation, and design work for the KrakowB
 
 ## 2026-01-02
 
+**More documentation**
+
+- [financial/fareharbor-payment-processing-analysis.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/financial/fareharbor-payment-processing-analysis.md)
+- [financial/payu-onboarding-plan.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/financial/payu-onboarding-plan.md)
+- [technical/booking-system-development-plan.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/technical/booking-system-development-plan.md)
+- [technical/booking-system-requirements.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/technical/booking-system-requirements.md)
+- [technical/booking-system-specification.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/technical/booking-system-specification.md)
+
+
+## 2026-01-02
+
 **Docs reorganization**
 
 - [bio.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/bio.md)
