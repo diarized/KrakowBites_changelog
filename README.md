@@ -16,7 +16,7 @@ Public changelog of deliverables, documentation, and design work for the KrakowB
 - [brand-alternatives/README.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/README.md)
 - [brand-alternatives/urban-cartography-mockup.html](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/urban-cartography-mockup.html)
 - [brand-alternatives/urban-cartography-specs.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-alternatives/urban-cartography-specs.md)
-- [docs/brand-identity-review.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-identity-review.md)
+- [brand-identity-review.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/brand-identity-review.md)
 - [competitor-analysis/visual-evidence.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/competitor-analysis/visual-evidence.md)
 
 
@@ -24,5 +24,5 @@ Public changelog of deliverables, documentation, and design work for the KrakowB
 
 **Add KrakowBites infrastructure setup documentation and deployment**
 
-- [docs/server-analysis-trzeci.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/server-analysis-trzeci.md)
+- [server-analysis-trzeci.md](https://github.com/diarized/KrakowBites_changelog/blob/master/docs/server-analysis-trzeci.md)
 
